@@ -17,24 +17,18 @@ First you need to install the requests package
 pipenv install requests
 ```
 
-## Running the tests
-
-To test the module you can run any of the following:
-
-### using pytest command
-
-```
-pytest --cov=search
-
-```
-
 ## To Use
 
 type in the command line your Github username, password, and the term you want to search
 
 ####Example:
 ```
-python search.py (Username) (password) (term)
+python search.py (term) -u (username) -p (password)
+
+#if you forgot your password a prompt will show to input your password
+python search.py (term) -u (username)
+Github Password:
+#the input password will not echo in the stdout so it is more secure
 ```
 
 The result will be saved on a CSV file with a file name of output-YYYY-MM-DD-HH-mm.csv
